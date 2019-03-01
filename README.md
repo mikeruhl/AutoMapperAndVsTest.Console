@@ -33,12 +33,16 @@ For reproduction, I'm assuming VStest.console is available anywhere.  If it is n
 This reproduction has a solution for the issue as well, first let's reproduce it:
 
 From a command line in the root of the project:
+
 `vstest.console ".\Core.Tests\bin\Debug\Core.Tests.dll" /Settings:".\.runsettings"`
 
 For consistency, I included tests in MSTest to ensure it's not NUnit.  I found the solution on NUnit issues github so I at first thought it could be their test adapter.
+
 `vstest.console ".\Core.MS.Tests\bin\Debug\Core.MS.Tests.dll" /Settings:".\.runsettings"`
 
+
 At this point you should receive the same errors for all 3 tests that's mentioned at the top of the README.
+
 
 Now to fix the issue, refer to the `InProc.runsettings` at the base of the project.  This is an identical file to .runsettings, only changing the DataCollection stuff to InProcData...
 
