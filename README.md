@@ -36,7 +36,7 @@ From a command line in the root of the project:
 
 `vstest.console ".\Core.Tests\bin\Debug\Core.Tests.dll" /Settings:".\.runsettings"`
 
-For consistency, I included tests in MSTest to ensure it's not NUnit.  I found the solution on NUnit issues github so I at first thought it could be their test adapter.
+For consistency, I included tests in MSTest to ensure it's not NUnit.  I found the solution in [NUnit's Issues](https://github.com/nunit/nunit3-vs-adapter/issues/519) so I at first thought it could be their test adapter.
 
 `vstest.console ".\Core.MS.Tests\bin\Debug\Core.MS.Tests.dll" /Settings:".\.runsettings"`
 
